@@ -10,8 +10,9 @@ Please make any formatting and/or content changes.
 ##Languages & Libraries
 
 ###Programming Libraries###
-* [WebConnect](http://webconnect.io/) :: browser to hardwear
-* [Fab Modules]http://kokompe.cba.mit.edu/ :: also a GUI, but very Python flavored
+* [WebConnect](http://webconnect.io/) :: browser to hardware
+* [Fab Modules](http://kokompe.cba.mit.edu/) :: also a GUI, but very Python flavored
+* [RML :: Roland Machine Language](http://mlab.taik.fi/paja/wp-content/uploads/2011/01/RML1_Command_GuideENVer100.pdf)
 
 
 ##Previous/Current Apps & projects
