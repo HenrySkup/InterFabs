@@ -40,6 +40,9 @@ Computer[hardware]-based/focused
 
 ###Papers
 * [Hierarchical Volumetric Object Representations for Digital Fabrication Workﬂows](http://cba.mit.edu/docs/theses/13.05.Keeter.pdf)
+* [Heterogeneous Solids: Possible Representation Schemes](http://www.clemson.edu/ces/credo/papers/postscript/solidrep.pdf)
+* [XML Representation and Process Algorithm for Layered Manufacturing of Heterogeneous Objects](http://edge.rit.edu/content/P10551/public/SFF/SFF%202002%20Proceedings/2002%20SFF%20Papers/29-Lau.pdf) :: "forget gcode:useXML"??? but i guess structurally it works? but really???
+
 
 ###Take a look (I have no clue how to categorize it)
 * [list of things](http://replicat.org/generators)
