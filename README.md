@@ -18,6 +18,25 @@ to be written.
 ##Directory Usage
 ```testSite``` contains resources for init website.  nothing more, nothing less.
 
+###Goals
+
+*platform parts*
+
+- Browser-based CAD
+- Browser-based CAM (ie. tool-path computing)
+- Browser-based Machine controle
+
+*process (and indicators of success)*
+
+- Browser-centric :: low bar-or-entry, everyone has it, os agnostic etc.
+- Run with or without concurrent internet access
+- Littlest/Simplest install possible (none, ideally)
+- Open-Source
+- HTML5 & Javascript based
+- Ease of user customization via as many programming languages as is possible (ie. custom tool-path generation scripts, custom g-code/machine code generation scripts, etc.)
+
+*If a three-year-old can use it, and if en engineer wants to use it: we have done out job.*
+
 ##Key Points & Theorems
 to be written.
 
