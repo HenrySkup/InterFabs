@@ -12,11 +12,10 @@ Stop reading. Get coding.
 
 ----
 
-##Introduction
-to be written.
+##About
 
-##Directory Usage
-```testSite``` contains resources for init website.  nothing more, nothing less.
+###Introduction
+to be written.
 
 ###Goals
 
@@ -37,7 +36,7 @@ to be written.
 
 *If a three-year-old can use it, and if en engineer wants to use it: we have done out job.*
 
-##Key Points & Theorems
+###Key Points & Theorems
 to be written.
 
 ###User Workflows
@@ -65,3 +64,7 @@ Machine                            Machine/moters
 (internal driver logic)
 
 ```
+
+##Deeper Info
+###Directory Usage
+```testSite``` contains resources for init website.  nothing more, nothing less.
