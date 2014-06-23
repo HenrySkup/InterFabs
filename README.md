@@ -13,12 +13,13 @@ Stop reading. Get coding.
 ----
 
 ##Introduction
-tbd
+to be written.
 
 ##Directory Usage
-```foundations``` is a directory meant to the initial experiments :: contain all files for initial experiments (ie. gcode/rml to machine via browser) ::  *not for research or notes*
+```testSite``` contains resources for init website.  nothing more, nothing less.
 
 ##Key Points & Theorems
+to be written.
 
 ###User Workflows
 
