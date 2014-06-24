@@ -1,0 +1,9 @@
+[submodule "./provision/modules/stdlib"]
+	path = ./provision/modules/stdlib
+	url = https://github.com/puppetlabs/puppetlabs-stdlib.git
+[submodule "./provision/modules/apt"]
+	path = ./provision/modules/apt
+	url = https://github.com/puppetlabs/puppetlabs-apt.git
+[submodule "./provision/modules/wget"]
+	path = ./provision/modules/wget
+	url = git://github.com/maestrodev/puppet-wget.git
