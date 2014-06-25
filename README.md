@@ -67,7 +67,9 @@ Machine                            Machine/moters
 
 ##Deeper Info
 ###Directory Usage
-```testSite``` contains resources for init website.  nothing more, nothing less.
+```testSite``` contains resources for init website.  nothing more, nothing less.  
+```.vagrant``` do not touch  
+```provision```  
 
 ----
 
@@ -77,9 +79,14 @@ This project is a group effort, of course, but its development is centered out o
 
 ####Core Team
 
-- [Henry Skupniewicz](mailto: henryskup@gmail.com)
-- Kishan Thobhani
-- Sohil Patel
-- Vibhav Srivastava
+- [Henry Skupniewicz](mailto: henryskup@gmail.com) is the head of FabLab CEPT and design thinker; he is also a visiting faculty member at CEPT University and team member of the Motwani Jadeja Family Foundation.
+- [Kishan Thobhani](mailto: thobhanikishan@gmail.com>) is a web-developer extrodinare focusing on the stuff you *see*.
+- [Sohil Patel](mailto: sohilpatel4932@gmail.com) is a serial entrepreneur and crazy hacker; he is also a team member of the Motwani Jadeja Family Foundation.
+- [Vibhav Srivastava](mailto: vibahv2211@gmail.com) is a IIIT-H student and is interested in social conscious tech solutions.
 
-Sohil Patel
+####Thanks
+This project is indebted to the following for their various forms of support.
+- The Motwani Jadeja Family Foundation
+- CEPT University
+- MIT
+- The FabFoundation
