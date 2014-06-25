@@ -68,3 +68,18 @@ Machine                            Machine/moters
 ##Deeper Info
 ###Directory Usage
 ```testSite``` contains resources for init website.  nothing more, nothing less.
+
+----
+
+###Credits, et al.
+
+This project is a group effort, of course, but its development is centered out of FabLab CEPT (Ahmedabad, GJ, India).  We *really* want to encurage anyone, anywhere to join the team.
+
+####Core Team
+
+- [Henry Skupniewicz](mailto: henryskup@gmail.com)
+- Kishan Thobhani
+- Sohil Patel
+- Vibhav Srivastava
+
+Sohil Patel
