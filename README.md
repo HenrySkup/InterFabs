@@ -8,7 +8,14 @@ Explorations in Browser-Based Applications for FabLabs
 
 ##How to Start Developing Now :space_invader:
 
-Stop reading. Get coding.
+###Make this platform better
+
+To be written.
+
+###Development patterns for other platforms
+It would be awesome to have a iPhone app, an Android app, a plugin for the obscure browser that you are using... but we need you help.
+
+Please see ```devPatterns.md``` for the methodology which will have to be followed regardless of platform.  This will not only allow for you to learn for our ~~mistakes~~ trials as well as to uniform development across all platforms.
 
 ----
 

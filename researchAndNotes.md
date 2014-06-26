@@ -48,3 +48,13 @@ Computer[hardware]-based/focused
 * [list of things](http://replicat.org/generators)
 * [Center for Bits and Atoms](http://cba.mit.edu/)
 * [Machines that Make Machines](http://mtm.cba.mit.edu/)
+
+
+http://codentonic.net/2013/04/21/cad-implementation-using-the-javascript-based-topology-library/
+http://openjscad.org/
+http://ghemingway.github.io/cad.js/?resource_url=/cad.js/data/cutter/index.json
+https://github.com/ghemingway/cad.js/tree/master
+https://github.com/D1plo1d/CadCanvas
+http://www.pearltrees.com/objectifmars/cad-browser-webgl/id4879261
+http://blackjk3.github.io/threefab/
+http://shapesmith.net/
