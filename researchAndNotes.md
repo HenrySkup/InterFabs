@@ -21,9 +21,8 @@ Please make any formatting and/or content changes.
 These links cover tools, projects, etc. that have produced packages to visualize, simulate, or produce gcode.
 
 Browser-Based/Focused
-* [gCode Visualizer](http://gcode.ws/ )
-* [GCode Viewer](http://buildlog.net/gview/)
-* [SnapFracturePop's GCode simulator](http://qcgeek.com/laseroko/draw.php)
+* [gCode Visualizer](http://gcode.ws/ ) :: [github](https://github.com/hudbrog/gCodeViewer)
+* [GCode Viewer](http://gcode.joewalnes.com/) :: [github](https://github.com/joewalnes/gcode-viewer)
 * [SnapFracturePop's GCode simulator](http://qcgeek.com/laseroko/draw.php)
 * [SimpleGCoder](http://simplegcoder.com/) (might not be working...)
 
@@ -48,6 +47,7 @@ Computer[hardware]-based/focused
 * [list of things](http://replicat.org/generators)
 * [Center for Bits and Atoms](http://cba.mit.edu/)
 * [Machines that Make Machines](http://mtm.cba.mit.edu/)
+* [just plain cool](https://www.cfa.harvard.edu/~dnelson/webgl/vormesh3.htm)
 
 
 http://codentonic.net/2013/04/21/cad-implementation-using-the-javascript-based-topology-library/
