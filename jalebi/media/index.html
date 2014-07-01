@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Jalebi Interfabs</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/justified-nav.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="js/ie-emulation-modes-warning.js"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script>
+    var QueryString = function () {
+  // This function is anonymous, is executed immediately and 
+  // the return value is assigned to QueryString!
+  var query_string = {};
+  var query = window.location.search.substring(1);
+  var vars = query.split("&");
+  for (var i=0;i<vars.length;i++) {
+    var pair = vars[i].split("=");
+      // If first entry with this name
+    if (typeof query_string[pair[0]] === "undefined") {
+      query_string[pair[0]] = pair[1];
+      // If second entry with this name
+    } else if (typeof query_string[pair[0]] === "string") {
+      var arr = [ query_string[pair[0]], pair[1] ];
+      query_string[pair[0]] = arr;
+      // If third or later entry with this name
+    } else {
+      query_string[pair[0]].push(pair[1]);
+    }
+  } 
+    return query_string;
+} ();
+</script>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="masthead">
+        <img src="img/jalebi.png" width="100px" height="100px" style="float:left;"/>
+        <h3 class="text-muted" style="font-size: 40px; position:relative;top: 30px; ">Jalebi.io</h3>
+        <div class="clearfix"></div>
+      </div>
+<br><br>
+      <!-- Jumbotron -->
+<!--       <div class="jumbotron">
+        <h1>Move Bit</h1>
+        <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet.</p>
+        <p><a class="btn btn-lg btn-success" href="#" role="button">Get started today</a></p>
+      </div>
+ -->
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-lg-8" id="parent">
+          <div id="object"></div>
+
+    <script src="js/three.min.js"></script>
+
+    <script src="js/hilbert3D.js"></script>
+
+    <script src="js/Detector.js"></script>
+    <script src="js/stats.min.js"></script>
+
+    <script>
+
+      if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+
+      var renderer, scene, camera, stats;
+      var objects = [];
+
+
+      var WIDTH = document.getElementById( 'parent' ).clientWidth,
+        HEIGHT = 250;
+
+      init();
+      animate();
+
+      function init() {
+
+        camera = new THREE.PerspectiveCamera( 60, WIDTH / HEIGHT, 1, 200 );
+        camera.position.z = 150;
+
+        scene = new THREE.Scene();
+
+        scene.fog = new THREE.Fog( 0x111111, 150, 200 );
+
+        root = new THREE.Object3D();
+
+        var subdivisions = 6;
+        var recursion = 1;
+
+        var points = hilbert3D( new THREE.Vector3( 0,0,0 ), 25.0, recursion, 0, 1, 2, 3, 4, 5, 6, 7 );
+
+        var spline = new THREE.Spline( points );
+        var geometrySpline = new THREE.Geometry();
+
+        for ( var i = 0; i < points.length * subdivisions; i ++ ) {
+
+          var index = i / ( points.length * subdivisions );
+          var position = spline.getPoint( index );
+
+          geometrySpline.vertices[ i ] = new THREE.Vector3( position.x, position.y, position.z );
+
+        }
+
+        var geometryCube = cube( 50 );
+
+        geometryCube.computeLineDistances();
+        geometrySpline.computeLineDistances();
+
+        var object = new THREE.Line( geometrySpline, new THREE.LineDashedMaterial( { color: 0x000000, dashSize: 1, gapSize: 0.5 } ), THREE.LineStrip );
+
+        objects.push( object );
+        scene.add( object );
+
+        var object = new THREE.Line( geometryCube, new THREE.LineDashedMaterial( { color: 0xffaa00, dashSize: 3, gapSize: 1, linewidth: 2 } ), THREE.LinePieces );
+
+        objects.push( object );
+        scene.add( object );
+
+        renderer = new THREE.CanvasRenderer();
+        renderer.setClearColor( 0xffffff, 1 );
+        renderer.setSize( WIDTH, HEIGHT );
+
+        var container = document.getElementById( 'object' );
+        container.appendChild( renderer.domElement );
+
+        // stats = new Stats();
+        // stats.domElement.style.position = 'absolute';
+        // stats.domElement.style.top = '0px';
+        // container.appendChild( stats.domElement );
+
+        //
+
+        window.addEventListener( 'resize', onWindowResize, false );
+
+      }
+
+      function cube( size ) {
+
+        var h = size * 0.5;
+
+        var geometry = new THREE.Geometry();
+
+        geometry.vertices.push(
+          new THREE.Vector3( -h, -h, -h ),
+          new THREE.Vector3( -h, h, -h ),
+
+          new THREE.Vector3( -h, h, -h ),
+          new THREE.Vector3( h, h, -h ),
+
+          new THREE.Vector3( h, h, -h ),
+          new THREE.Vector3( h, -h, -h ),
+
+          new THREE.Vector3( h, -h, -h ),
+          new THREE.Vector3( -h, -h, -h ),
+
+
+          new THREE.Vector3( -h, -h, h ),
+          new THREE.Vector3( -h, h, h ),
+
+          new THREE.Vector3( -h, h, h ),
+          new THREE.Vector3( h, h, h ),
+
+          new THREE.Vector3( h, h, h ),
+          new THREE.Vector3( h, -h, h ),
+
+          new THREE.Vector3( h, -h, h ),
+          new THREE.Vector3( -h, -h, h ),
+
+          new THREE.Vector3( -h, -h, -h ),
+          new THREE.Vector3( -h, -h, h ),
+
+          new THREE.Vector3( -h, h, -h ),
+          new THREE.Vector3( -h, h, h ),
+
+          new THREE.Vector3( h, h, -h ),
+          new THREE.Vector3( h, h, h ),
+
+          new THREE.Vector3( h, -h, -h ),
+          new THREE.Vector3( h, -h, h )
+         );
+
+        return geometry;
+
+      }
+
+      function onWindowResize() {
+
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+
+        renderer.setSize( window.innerWidth, window.innerHeight );
+
+      }
+
+      function animate() {
+
+        requestAnimationFrame( animate );
+
+        render();
+        // stats.update();
+
+      }
+
+      function render() {
+
+        var time = Date.now() * 0.001;
+
+        for ( var i = 0; i < objects.length; i ++ ) {
+
+          var object = objects[ i ];
+
+          //object.rotation.x = 0.25 * time * ( i%2 == 1 ? 1 : -1);
+          object.rotation.x = 0.25 * time;
+          object.rotation.y = 0.25 * time;
+
+        }
+
+        renderer.render( scene, camera );
+
+      }
+
+
+  </script>
+
+        </div>
+        <div class="col-lg-4 mc-input" >
+          <h4>Milling</h4>
+          <form role="form" action="upload" method="post" enctype="multipart/form-data">
+            <div class="form-group input-group input-group-md">
+              
+              <span class="btn btn-default btn-md btn-file">
+                Choose RML File <input required="required" name="theFile" id="rml" type="file">
+              </span>
+            <button type="submit" style="margin-left: 10px;" class="btn btn-md btn-success">Print</button>
+            </div>
+            
+          </form>
+          <form role="form" action="move" method="get">
+            <div class="form-group input-group input-group-md">
+              <span class="input-group-addon">X</span>
+              <input required="required"s id="x" name="x" type="text" class="form-control" value="0" placeholder="0">
+              <span class="input-group-addon">mm</span>
+            </div>
+             <div class="form-group input-group input-group-md">
+              <span class="input-group-addon">Y</span>
+              <input required="required" id="y" name="y" type="text" class="form-control" value="0" placeholder="0">
+              <span class="input-group-addon">mm</span>
+            </div>
+            <div class="form-group">
+                  <button type="submit" class="btn btn-md btn-default">Set origin</button>
+            </div>
+          </form>
+          <br>
+          
+       </div>
+        
+          
+      </div>
+
+      <!-- Site footer -->
+      <div class="footer">
+        <p>&copy; Jalebi.io 2014.<br> A FabLab CEPT project.</p>
+      </div>
+
+    </div> <!-- /container -->
+
+<script type="text/javascript">
+  if ( QueryString.message ) {
+    alert( decodeURI(QueryString.message) );
+    document.getElementById('x').value = QueryString.x ;
+    document.getElementById('y').value = QueryString.y ;
+  }
+</script>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  </body>
+</html>
