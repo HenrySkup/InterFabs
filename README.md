@@ -86,9 +86,8 @@ Because of this, we have decided to use the web-browser -- specifically, Google 
 ##Deeper Info
 ###Directory Usage
 ```testSite``` contains resources for init website.  nothing more, nothing less.  
-```.vagrant``` do not touch
-
-```provision``` developer 
+```.vagrant``` do not touch  
+```provision``` developer
 
 ----
 
